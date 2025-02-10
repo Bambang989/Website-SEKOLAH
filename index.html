@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restoran Lezat</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f8f8f8; }
+        h1, h2 { text-align: center; color: #d35400; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+        th { background-color: #e67e22; color: white; }
+        img, video { width: 100%; max-width: 500px; display: block; margin: auto; }
+        .menu-section { text-align: center; margin: 20px 0; }
+        .form-container { width: 50%; margin: auto; padding: 20px; background-color: white; border-radius: 5px; }
+        input, select, textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; }
+        input[type="submit"] { background-color: #e67e22; color: white; border: none; cursor: pointer; }
+        input[type="submit"]:hover { background-color: #d35400; }
+        .footer { text-align: center; margin-top: 30px; padding: 10px; background-color: #e67e22; color: white; }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <h1>🍽️ Restoran H. Hanafi S.H</h1>
+    <p align="center"><strong>Menikmati hidangan lezat dengan cita rasa terbaik!</strong></p>
+
+    <hr>
+
+    <!-- Video Restoran -->
+    <h2>🎥 Restoran Kami</h2>
+    <video controls>
+        <source src="../dasarWeb/img/video-restorant.mp4" type="video/mp4">
+        Browser Anda tidak mendukung pemutaran video.
+    </video>
+
+    <hr>
+
+    <!-- Daftar Makanan -->
+    <h2>🍛 Daftar Menu</h2>
+    <table>
+        <tr>
+            <th>Nama Makanan</th>
+            <th>Harga</th>
+            <th>Gambar</th>
+        </tr>
+        <tr>
+            <td>Nasi Goreng Spesial</td>
+            <td>Rp 25.000</td>
+            <td><img src="../dasarWeb/img/nasi-goreng-spesial.jpeg" alt="Nasi Goreng Spesial" style="width: 200px; height: auto;"></td>
+        </tr>
+        <tr>
+            <td>Ayam Bakar Madu</td>
+            <td>Rp 35.000</td>
+            <td><img src="../dasarWeb/img/ayam-bakar-madu.jpeg" alt="Ayam Bakar Madu" style="width: 200px; height: auto;"></td>
+        </tr>
+        <tr>
+            <td>Iga Bakar Wagyu A5</td>
+            <td>Rp 135.000</td>
+            <td><img src="../dasarWeb/img/iga-bakar-wagyu-a5.jpeg" alt="Iga Bakar Wagyu A5" style="width: 200px; height: auto;"></td>
+        </tr>
+        <tr>
+            <td>Gado-gado</td>
+            <td>Rp 20.000</td>
+            <td><img src="../dasarWeb/img/gado-gado.jpeg" alt="Gado-gado" style="width: 200px; height: auto;"></td>
+        </tr>
+        <tr>
+            <td>Sup Ayam</td>
+            <td>Rp 30.000</td>
+            <td><img src="../dasarWeb/img/sup-ayam.jpeg" alt="Sup Ayam" style="width: 200px; height: auto;"></td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- Daftar Rekomendasi -->
+    <div class="menu-section">
+        <h2>⭐ Rekomendasi Menu</h2>
+        <ol>
+            <li>Nasi Goreng Spesial</li>
+            <li>Ayam Bakar Madu</li>
+            <li>Iga Bakar Wagyu A5</li>
+        </ol>
+
+        <h2>📌 Menu Tambahan</h2>
+        <ul>
+            <li>Udang Keju</li>
+            <li>Burger</li>
+            <li>Gorengan Jumbo</li>
+            <li>Kentang Goreng</li>
+            <li>Onion Rings</li>
+            <li>Souffle Pancake</li>
+        </ul>
+        <h2>🍻 Minuman</h2>
+        <ul>
+            <li>Es/Panas Teh Jumbo</li>
+            <li>Soda Gembira</li>
+            <li>Es/Panas Jeruk</li>
+            <li>Es/Panas LemonTea</li>
+            <li>Caffe Macchiato</li>
+            <li>Matcha</li>
+        </ul>
+        <h2>🍹 Jus</h2>
+        <ul>
+            <li>Aneka Buah</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <!-- Form Pemesanan -->
+    <h2 align="center">📝 Formulir Pemesanan</h2>
+    <div class="form-container">
+        <form action="submit.php" method="post">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="makanan">Pilih Makanan:</label>
+            <select id="makanan" name="makanan">
+                <option value="nasi-goreng-spesial">Nasi Goreng Spesial</option>
+                <option value="ayam-bakar-madu">Ayam Bakar Madu</option>
+                <option value="iga-bakar-wagyu-a5">Iga Bakar Wagyu A5</option>
+                <option value="gado-gado">Gado Gado</option>
+                <option value="sup-ayam">Sup Ayam</option>
+            </select>
+
+            <label for="minuman">Pilih Minuman:</label>
+            <select id="minuman" name="minuman">
+                <option value="es/panas-teh-jumbo">Es/Panas teh Jumbo</option>
+                <option value="soda-gembira">Soda Gembira</option>
+                <option value="es/panas-jeruk">Es/Panas jeruk</option>
+                <option value="es/panas-lemontea">Es/Panas Lemontea</option>
+                <option value="aneka-jus">Aneka Jus</option>
+                <option value="caffe-macchiato">Caffe Macchiato</option>
+                <option value="matcha">Matcha</option>
+            </select>
+
+             <label for="pesan">Menu Tambahan:</label>
+            <textarea id="pesan" name="pesan" rows="4"></textarea>
+
+            <label for="pesan">Catatan Tambahan:</label>
+            <textarea id="pesan" name="pesan" rows="4"></textarea>
+
+            <input type="submit" value="Pesan Sekarang">
+        </form>
+    </div>
+
+    <hr>
+
+    <!-- Link Sosial Media -->
+    <h2 align="center">📍 Hubungi Kami</h2>
+    <p align="center">
+        <a href="https://www.instagram.com/restoran_h.hanafi" target="_blank">Instagram</a> |
+        <a href="https://wa.me/6287740153859" target="_blank">WhatsApp</a> |
+        <a href="bambang2324567@gmail.com">Email Kami</a>
+    </p>
+
+    <hr>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 Restoran Hanafi. Semua Hak Dilindungi.</p>
+    </div>
+
+</body>
+</html>
